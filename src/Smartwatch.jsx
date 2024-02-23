@@ -4,19 +4,10 @@ import Cart from './Component/Cart';
 import Card from './Component/Card';
 
 
-const Smartwatch = () => {
+const Smartwatch = ({cart,addToCart,removeFromCart}) => {
     const[product,setProduct]=useContext(myContext)
     const smart = product.filter((item)=> item.category === 'smart watch') 
-    const [cart, setCart] = useState([]);
-
-    const addToCart = (product) => {
-        setCart([...cart, product]);
-    };
-
-    const removeFromCart = (product) => {
-        setCart(cart.filter(item => item.id !== product.id));
-    };
-
+   
       return (
         <div className='container'>
         <div className="row">

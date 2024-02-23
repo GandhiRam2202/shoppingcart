@@ -30,7 +30,7 @@ const Cart = ({ cart, removeFromCart }) => {
                             <div key={item.id}>
                                 <div className='col-sm-12 d-flex color mt-3'>
                                     <div className='col-4 border'>
-                                        <img src={item.thumbnail} width='100%' alt="" />
+                                        <img src={item.thumbnail} width='100%' alt="" className='images' />
                                     </div>
                                     <div className="row">
                                         <div className="col-12 d-flex justify-content-evenly">

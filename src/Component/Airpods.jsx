@@ -3,17 +3,9 @@ import { myContext } from '../App';
 import Card from './Card';
 import Cart from './Cart';
 
-const Airpods = () => {
+const Airpods = ({cart,addToCart,removeFromCart}) => {
     const [product, setProduct] = useContext(myContext);
-    const [cart, setCart] = useState([]);
-
-    const addToCart = (product) => {
-        setCart([...cart, product]);
-    };
-
-    const removeFromCart = (product) => {
-        setCart(cart.filter(item => item.id !== product.id));
-    };
+    
 
     const airpods = product.filter((item) => item.category === 'airpods');
 

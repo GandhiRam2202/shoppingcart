@@ -29,7 +29,17 @@ a:hover{
     color: red;
 }
 .removeFromCart{
+    border-radius: 25px;
     background: none;
     color: red;
     border: none;
+}
+.card:hover{
+    box-shadow: 2px 0px 10px black;
+}
+.images{
+    padding: 5px;
+}
+.card-img{
+    padding: 10px;
 }

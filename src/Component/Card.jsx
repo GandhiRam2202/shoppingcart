@@ -14,8 +14,8 @@ const Card = ({ product, addToCart, removeFromCart, isAddedToCart }) => {
                 <div className="card-text text-center text-secondary">Rating: {product.rating}</div>
                 <div className='d-flex justify-content-center'>
                     {isAddedToCart ?
-                        <button className='addTocart border bg-danger text-white fw-bolder' onClick={() => removeFromCart(product)}>Remove From Cart</button> :
-                        <button className='addTocart border bg-primary text-white fw-bolder' onClick={() => addToCart(product)}>Add to Cart</button>
+                        <button className='removeFromCart border bg-danger text-white fw-bolder' onClick={() => removeFromCart(product)}>Remove From Cart</button> :
+                        <button className='addTocart border bg-primary text-white fw-bolder rounded-5' onClick={() => addToCart(product)}>Add to Cart</button>
                     }
                 </div>
             </div>

@@ -3,18 +3,9 @@ import Card from './Card';
 import Cart from './Cart';
 import { myContext } from '../App';
 
-const Home = () => {
+const Home = ({cart,addToCart,removeFromCart}) => {
     const [products] = useContext(myContext)
-    const [cart, setCart] = useState([]);
-    
-
-    const addToCart = (product) => {
-        setCart([...cart, product]);
-    };
-
-    const removeFromCart = (product) => {
-        setCart(cart.filter(item => item.id !== product.id));
-    };
+   
 
     return (
         <div className="container">

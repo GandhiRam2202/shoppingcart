@@ -890,7 +890,15 @@ const obj = [
 const[product,setProduct]=useState(obj)
 const[value,setValue]=useState(0)
     
+const [cart, setCart] = useState([]);
 
+const addToCart = (product) => {
+    setCart([...cart, product]);
+};
+
+const removeFromCart = (product) => {
+    setCart(cart.filter(item => item.id !== product.id));
+};
 
 
 
@@ -907,12 +915,12 @@ const[value,setValue]=useState(0)
     
     <Routes>
     
-    <Route path='/' element={<Home/>} />
-    <Route path='/mobile' element={<Mobile/>}/>
-    <Route path='/airpods' element={<Airpods/>}/>
-    <Route path='/headphones' element={<Headphones />}/>
-    <Route path='/charger' element={<Charger />}/>
-    <Route path='/smartwatch' element={<Smartwatch />}/>
+    <Route path='/' element={<Home cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>} />
+    <Route path='/mobile' element={<Mobile cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
+    <Route path='/airpods' element={<Airpods cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
+    <Route path='/headphones' element={<Headphones cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
+    <Route path='/charger' element={<Charger cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
+    <Route path='/smartwatch' element={<Smartwatch cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
      
    </Routes>
    </div>

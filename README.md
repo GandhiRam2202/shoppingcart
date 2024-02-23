@@ -11,8 +11,9 @@ This is a simple shopping page application where users can browse through a list
 - **Adjust Quantity:** Within the cart, users can increase or decrease the quantity of each product using the "+" and "-" buttons provided.
   
 - **Total Quantity and Total Price:** The cart displays the total quantity of all items and the total price of the items in the cart.
-[Image](/assets/images/1.png)
+![1](https://github.com/GandhiRam2202/shoppingcart/assets/152801640/87779024-66a0-416b-896f-8b3edcb9c3de)
 ## How to Use
+
 
 1. **Browse Products:** Navigate through the list of products available on the shopping page.
 

@@ -13,14 +13,18 @@ a:hover{
     background-color: lightgray;
 }
 .plus{
+    height: 50%;
     width: 20px;
     margin: 0;
     border: none;
     background-color: none;
     color: red;
+    border-radius: 100%;
     font-weight: bolder;
 }
 .minus{
+    height: 50%;
+    border-radius: 100%;
     width: 20px;
     font-weight: bolder;
     margin: 0;
@@ -42,4 +46,7 @@ a:hover{
 }
 .card-img{
     padding: 10px;
+}
+.mins{
+    margin-bottom: 2000px;
 }

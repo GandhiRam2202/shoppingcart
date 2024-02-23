@@ -84,10 +84,14 @@ const Cart = ({ cart, removeFromCart }) => {
                                         </div>
                                         <div className="col-12 d-flex justify-content-evenly">
                                             <h5>Brand:{item.brand}</h5>
-                                            <div className='d-flex'>
-                                                <button className='minus' onClick={() => decreaseQuantity(item.id)}>-</button>
+                                            <div className='col-1'>
+                                                <button className='btn minus p-0 ' onClick={() => decreaseQuantity(item.id)}><i className="fa-regular fa-square-minus bg-white" style={{color: "#ff0000"}}></i></button>
+                                            </div>
+                                            <div className='col-1 text-center'>
                                                 <p className='mb-0'>{quantities[item.id] || 1}</p>
-                                                <button className='plus' onClick={() => increaseQuantity(item.id)}>+</button>
+                                            </div>
+                                            <div className='col-1'>
+                                                <button className='btn plus p-0  mb-0' onClick={() => increaseQuantity(item.id)}><span><i className="fa-regular fa-square-plus bg-white" style={{color: "#ff0000"}}></i></span></button>
                                             </div>
                                         </div>
                                         <div className="d-flex justify-content-evenly">

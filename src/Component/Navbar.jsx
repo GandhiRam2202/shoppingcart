@@ -10,7 +10,7 @@ const Navbar = ({value}) => {
             <div>
           <button className="btn d-block d-lg-none  p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><span className="fa-solid fa-cart-plus d-none d-md-block text-white" style={{color: '#0008ff'}}>{value}</span><span className="fa-solid fa-cart-plus d-block d-md-none text-white p-0" style={{color: '#0008ff'}}>{value}</span></button>
             </div>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           </div>

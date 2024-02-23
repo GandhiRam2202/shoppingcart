@@ -37,3 +37,8 @@ This is a simple shopping page application where users can browse through a list
 # About
 
 - This shopping page application was created to demonstrate basic e-commerce functionality using React.js. It allows users to interact with a list of products, add them to their cart, adjust quantities, and remove items from the cart.
+![2](https://github.com/GandhiRam2202/shoppingcart/assets/152801640/518d1404-1709-470a-90eb-ac383ac7ffbe)
+
+![1](https://github.com/GandhiRam2202/shoppingcart/assets/152801640/9cabba3a-e407-42dd-a289-9139232fee76)
+
+![3](https://github.com/GandhiRam2202/shoppingcart/assets/152801640/3ea47bc7-cf3e-4943-a64a-a5af65da7018)

@@ -1,6 +1,6 @@
-import Cart from './Component/Cart';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './Component/Navbar';
+import Cart from './Component/Cart'; 
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
+import Navbar from './Component/Navbar'; 
 import Home from './Component/Home';
 import Mobile from './Mobile';
 import Airpods from './Component/Airpods';
@@ -8,18 +8,22 @@ import Headphones from './Headphones';
 import Charger from './Charger';
 import Smartwatch from './Smartwatch';
 import Header from './Header';
-
-
 import { createContext, useState } from 'react';
 import Footer1 from './Component/Footer1';
 
+// Exporting myContext from App.jsx To access the Object in Needed Component
+
 export const myContext = createContext('')
 
+// Exporting myContext from App.jsx To access the Object in Needed Component
 
 const App = () => {
+
+  // Object
+
 const obj = [
   {
-      "id": 1,
+      "id": 19,
       "title": "Charger",
       "description": "Fast Charger",
       "price": 500,
@@ -38,7 +42,7 @@ const obj = [
       ]
   },
   {
-      "id": 2,
+      "id": 18,
       "title": "Charger",
       "description": "Charger",
       "price": 899,
@@ -56,7 +60,7 @@ const obj = [
       ]
   },
   {
-      "id": 3,
+      "id": 17,
       "title": "Chager",
       "description": "Fast Charger",
       "price": 1249,
@@ -71,7 +75,7 @@ const obj = [
       ]
   },
   {
-      "id": 4,
+      "id": 16,
       "title": "Charger",
       "description": "Fast Charger",
       "price": 280,
@@ -90,7 +94,7 @@ const obj = [
       ]
   },
   {
-      "id": 5,
+      "id": 15,
       "title": "Charger",
       "description": "Charger",
       "price": 499,
@@ -107,7 +111,7 @@ const obj = [
       ]
   },
   {
-      "id": 6,
+      "id": 14,
       "title": "Charger",
       "description": "Charger",
       "price": 249,
@@ -124,7 +128,7 @@ const obj = [
       ]
   },
   {
-      "id": 7,
+      "id": 13,
       "title": "Charger",
       "description": "Charger",
       "price": 199,
@@ -141,7 +145,7 @@ const obj = [
       ]
   },
   {
-      "id": 8,
+      "id": 12,
       "title": "Charger",
       "description": "Charger",
       "price": 279,
@@ -158,7 +162,7 @@ const obj = [
       ]
   },
   {
-      "id": 9,
+      "id": 11,
       "title": "Charger",
       "description": "Charger",
       "price": 129,
@@ -192,7 +196,7 @@ const obj = [
       ]
   },
   {
-    "id": 11,
+    "id": 9,
     "title": "Mobile",
     "description": "Mobile",
     "price": 500,
@@ -211,7 +215,7 @@ const obj = [
     ]
 },
 {
-    "id": 12,
+    "id": 8,
     "title": "Mobile",
     "description": "Mobile",
     "price": 899,
@@ -229,7 +233,7 @@ const obj = [
     ]
 },
 {
-    "id": 13,
+    "id": 7,
     "title": "Mobile",
     "description": "Mobile",
     "price": 1249,
@@ -244,7 +248,7 @@ const obj = [
     ]
 },
 {
-    "id": 14,
+    "id": 6,
     "title": "Mobile",
     "description": "Mobile",
     "price": 280,
@@ -263,7 +267,7 @@ const obj = [
     ]
 },
 {
-    "id": 15,
+    "id": 5,
     "title": "Mobile",
     "description": "Mobile",
     "price": 499,
@@ -280,7 +284,7 @@ const obj = [
     ]
 },
 {
-    "id": 16,
+    "id": 4,
     "title": "Mobile",
     "description": "Mobile",
     "price": 249,
@@ -297,7 +301,7 @@ const obj = [
     ]
 },
 {
-    "id": 17,
+    "id": 3,
     "title": "Mobile",
     "description": "Mobile",
     "price": 199,
@@ -314,7 +318,7 @@ const obj = [
     ]
 },
 {
-    "id": 18,
+    "id": 2,
     "title": "Mobile",
     "description": "Mobile",
     "price": 279,
@@ -331,7 +335,7 @@ const obj = [
     ]
 },
 {
-    "id": 19,
+    "id": 1,
     "title": "Mobile",
     "description": "Mobile",
     "price": 129,
@@ -886,17 +890,34 @@ const obj = [
   
 ]
 
+// Use State For Object
 
 const[product,setProduct]=useState(obj)
-const[value,setValue]=useState(0)
-    
+
+// Use State For Object
+
+// Use State For Cart Value
+
+let [value, setValue] = useState(0)
+
+// Use State For Cart Value
+
+// Use State For Cart Data
+
 const [cart, setCart] = useState([]);
 
+// Use State For Cart Data
+
+
+// Function To Add Product Into Cart And Increase The Product Count In Cart Logo pn NavBar
 const addToCart = (product) => {
-    setCart([...cart, product]);
+  setValue(value = value + 1)
+  setCart([...cart, product]);
 };
 
+// Function To Add Product Into Cart And Decrease The Product Count In Cart Logo pn NavBar
 const removeFromCart = (product) => {
+  setValue(value=value - 1)
     setCart(cart.filter(item => item.id !== product.id));
 };
 
@@ -904,17 +925,25 @@ const removeFromCart = (product) => {
 
   return (
     <>
+
+    {/* Using Context Provider to Access The Object Data in Needed Component  */}
+
      <myContext.Provider value={[product,setProduct]}>
+
+    {/* Browser Router is Used to Route from One component to Another Component */}
+
      <BrowserRouter>
     
-    <Navbar value={value} setValue={setValue}/>
+    {/* NavBar Component */}
+    <Navbar value={value}/>
+    {/* Header Component */}
     <Header/>
 
     
    <div className="container">
     
     <Routes>
-    
+
     <Route path='/' element={<Home cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>} />
     <Route path='/mobile' element={<Mobile cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
     <Route path='/airpods' element={<Airpods cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>}/>
@@ -925,8 +954,10 @@ const removeFromCart = (product) => {
    </Routes>
    </div>
    </BrowserRouter>
+   {/* Cart Component */}
      <Cart/>
      </myContext.Provider>
+   {/* Footer Component */}
      <Footer1/>
 
     </>

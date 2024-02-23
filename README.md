@@ -1,4 +1,4 @@
-# Shopping Page
+# Shopping Page [Netlify](https://grpshoppingpage.netlify.app/)
 
 This is a simple shopping page application where users can browse through a list of products, add them to their cart, and remove them from the cart. The cart functionality also allows users to adjust the quantity of each product.
 

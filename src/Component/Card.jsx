@@ -4,7 +4,7 @@ const Card = ({ product, addToCart, removeFromCart, isAddedToCart }) => {
     return (
         <div className="card h-100">
             <div className="card-img">
-                <div className="nav-brand position-absolute right-0 bg-black rounded text-white fw-bolder">%{product.discountPercentage}Off</div>
+                <div className="nav-brand position-absolute right-0 bg-black rounded text-white fw-bolder">{product.discountPercentage}%Off</div>
                 <img width='100%' src={product.thumbnail} alt="" />
             </div>
             <div className="card-text text-center p-4">

@@ -16,15 +16,15 @@ const Navbar = ({value}) => {
           </div>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <div className="navbar-nav me-auto">
+            <div className="navbar-nav ms-auto">
 
               
+                <Link to='/' className='fw-bolder'>All</Link>
                 <Link to='/mobile' className='fw-bolder'>Mobiles</Link>
                 <Link to='/airpods' className='fw-bolder'>Airpods</Link>
                 <Link to='/headphones' className='fw-bolder'>Headphones</Link>
                 <Link to='/charger' className='fw-bolder'>Charger</Link>
                 <Link to='/smartwatch' className='fw-bolder'>Smart Watch</Link>
-                <Link to='/' className='fw-bolder'>All</Link>
               
             </div>
               

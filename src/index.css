@@ -5,7 +5,7 @@ a{
     font-size: 20px;
 }
 a:hover{
-    color: aqua;
+    color: red;
 }
 .color{
     padding: 0;
